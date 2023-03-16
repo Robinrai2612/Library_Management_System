@@ -1,0 +1,43 @@
+<div class="container">
+  <form>
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" [(ngModel)]="isbn" />
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="title" />
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" [(ngModel)]="author" />
+
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="description"
+    ></textarea>
+
+    <label for="published_year">Published Year:</label>
+    <input
+      type="number"
+      id="published_year"
+      name="published_year"
+      min="1945"
+      max="2019"
+      [(ngModel)]="published_year"
+    />
+
+    <label for="publisher">Publisher:</label>
+    <input
+      type="text"
+      id="publisher"
+      name="publisher"
+      [(ngModel)]="publisher"
+    />
+
+   <div class="mx-a">
+        <button class="btn btn-primary" (click)="onSubmit()">Submit</button>
+    </div>
+  </form>
+</div>
+
+

@@ -1,0 +1,50 @@
+<div class="container">
+  <form>
+    <label for="isbn">ISBN:</label>
+    <input type="text" id="isbn" name="isbn" [(ngModel)]="isbn" required />
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" [(ngModel)]="title" required />
+    <!-- {{ title }} -->
+
+    <label for="author">Author:</label>
+    <input
+      type="text"
+      id="author"
+      name="author"
+      [(ngModel)]="author"
+      required
+    />
+
+    <label for="description">Description:</label>
+    <input
+      type="text"
+      id="description"
+      name="description"
+      [(ngModel)]="description"
+      required
+    />
+
+    <label for="published_year">Published Year:</label>
+    <input
+      type="number"
+      id="published_year"
+      name="published_year"
+      [(ngModel)]="published_year"
+      min="1945"
+      max="2019"
+      required
+    />
+
+    <label for="publisher">Publisher:</label>
+    <input
+      type="text"
+      id="publisher"
+      name="publisher"
+      [(ngModel)]="publisher"
+      required
+    />
+
+    <button type="submit" (click)="updatebook()">Update Book</button>
+  </form>
+</div>

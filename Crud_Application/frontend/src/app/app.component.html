@@ -1,0 +1,24 @@
+<nav class="navbar bg-info">
+  <div class="container">
+    <h2>BookStore</h2>
+  </div>
+  <div class="d-flex">
+    <button
+      class="btn btn-success me-4"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      [routerLink]="'/'"
+    >
+      Home
+    </button>
+    <button
+      class="btn btn-success me-4"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+      [routerLink]="'/add'"
+    >
+      Add Book
+    </button>
+  </div>
+</nav>
+<router-outlet></router-outlet>

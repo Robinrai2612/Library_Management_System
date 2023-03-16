@@ -1,0 +1,35 @@
+<div class="table-wrapper">
+  <table class="table">
+    <thead class="thead-light">
+      <tr>
+        <th>ID</th>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Author</th>
+        <th>Publisher</th>
+        <th>Published Date</th>
+        <th>Updated Date</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of books$ | async">
+        <td>{{ book._id }}</td>
+        <td>{{ book.isbn }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.description }}</td>
+        <td>{{ book.author }}</td>
+        <td>{{ book.publisher }}</td>
+        <td>{{ book.published_year }}</td>
+        <td>{{ book.updated_date }}</td>
+        <td>
+          <button class="btn edit m-1" (click)="editBook(book)">Edit</button>
+          <button class="btn delete m-1" (click)="deleteBook(book._id!)">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
